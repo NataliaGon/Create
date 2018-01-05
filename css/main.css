@@ -1,0 +1,173 @@
+/*
+******************
+* MAIN
+******************
+*/
+@font-face {
+    font-family: 'almoni-tzar';
+    font-style: normal;
+    font-weight: 100;
+    src: url(../fonts/almoni-tzar-aaa-100.woff);    
+}
+
+@font-face {
+    font-family: 'avenir-next';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/AvenirNextCondensed-Regular.ttf);   
+}
+header, body{
+    font-family: "almoni-tzar";
+    font-size: 16px; 
+    color: white;
+    direction: rtl;
+}
+h1{
+    font-size:3em;
+  }
+h2{
+    font-size: 2em;
+  }
+h3{
+    font-size: 1.5em;
+  } 
+h4{
+    font-size: 1.2em;
+  }
+h5{
+    font-size: 0.9em;
+  }
+h6{
+    font-size: 0.6em;
+}
+.section{  
+    width: calc(100%-80px);  
+    height:45vw;    
+    position: relative;
+    z-index: 1;
+}
+.z-index-2{
+    position: absolute;
+    z-index: 2;
+}  
+.container-background{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: calc(100%-40px);
+    height: 100%;
+    background: #B8B8B8;    
+    position: relative;
+}
+
+/*
+******************
+* HEADER
+******************
+*/
+header{
+    height: 80px;	
+    width: 100%;
+    background-color: #141414;
+    display: flex;
+    align-items: center; 
+    justify-content:space-between;    
+}
+.logo{
+    background-color: aliceblue;
+    color: #141414;
+}
+.list-menu{
+    height: 100%;
+    display: flex;
+    align-items: center;    
+}
+.list-menu>li{
+    color: #FFFFFF;
+    margin-right: 10px;    
+}
+/*
+******************
+* GRADUATE
+******************
+*/
+.our-graduate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;     
+    width: 100%;  
+    height:60vw;
+    position: relative;
+}
+.graduate-img{
+    width: 100%;
+	height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.graduate-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center; 
+}
+.btn-collaboration{
+    height: 60px;	
+    width: 200px;	
+    border: 2px solid #FFFFFF;
+    background-color: transparent;
+    position: absolute;
+    bottom: 3vw;
+}
+/*
+******************
+* STUDENTS
+******************
+*/
+.students-img{
+    width: 100%;
+	height: 100%;
+    position: absolute;    
+}
+.students-text{   
+    top:3vw;
+    right: 5.3vw;
+    text-align: right;
+}
+.logo-wix{
+    height: 47px;
+	width: 210px;    
+}
+.student-name{
+    margin-top:5vw;
+    font-size:2em;
+    font-weight: bold;
+}
+.student-about{
+    font-family: "avenir-next";
+    font-size: 2em;
+}
+.student-speach{
+    height: 184px;	
+    width: 644px;    
+    margin-top:2em;
+    font-family: "almoni-tzar";
+    font-size: 40px;	
+    font-weight: bold;	
+    line-height: 46px;
+}
+.student-speach h3{
+    font-family: "almoni-tzar";
+    font-size: 40px;	
+    font-weight: bold;	
+    line-height: 46px;
+    margin-left: 3em;    	    
+} 
+.btn-student{
+    height: 60px;
+    width: 180px;
+    background-color: #FFFFFF;
+    font-size: 24px;	
+     
+}

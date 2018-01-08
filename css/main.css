@@ -9,15 +9,13 @@
     font-weight: 100;
     src: url(../fonts/almoni-tzar-aaa-100.woff);    
 }
-
 @font-face {
-    font-family: 'avenir-next';
-    font-style: normal;
-    font-weight: 400;
-    src: url(../fonts/AvenirNextCondensed-Regular.ttf);   
+    font-family: 'almoni-tzar-bold';    
+    src: url(../fonts/almoni-tzar-aaa-700.woff);   
 }
 header, body{
     font-family: "almoni-tzar";
+    font-weight: 100;
     font-size: 16px; 
     color: white;
     direction: rtl;
@@ -40,11 +38,13 @@ h5{
 h6{
     font-size: 0.6em;
 }
-.section{  
-    width: calc(100%-80px);  
-    height:45vw;    
-    position: relative;
-    z-index: 1;
+button{
+    outline: none;
+    overflow: hidden;
+    height: 60px;
+    width: 200px;
+    font-family: 'almoni-tzar';
+    font-weight: 600;
 }
 .z-index-2{
     position: absolute;
@@ -97,7 +97,7 @@ header{
     align-items: center;  
     justify-content: center;     
     width: 100%;  
-    height:60vw;
+    height:40vw;
     position: relative;
 }
 .graduate-img{
@@ -110,64 +110,250 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;  
-    justify-content: center; 
+    justify-content: center;     
 }
-.btn-collaboration{
-    height: 60px;	
-    width: 200px;	
+.graduate-text h1{
+    font-family:  'almoni-tzar-bold';    
+}
+.btn-collaboration{    
     border: 2px solid #FFFFFF;
     background-color: transparent;
     position: absolute;
     bottom: 3vw;
+    color: #FFFFFF;
+    font-size: 1.5em;   
 }
 /*
 ******************
 * STUDENTS
 ******************
 */
+.section{  
+    width: calc(100%-80px);  
+    height:45vw;    
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+.section:last-child{
+    margin-bottom: 0px;
+}
 .students-img{
     width: 100%;
 	height: 100%;
     position: absolute;    
 }
-.students-text{   
+.students-text-right{   
     top:3vw;
-    right: 5.3vw;
+    right: 4vw;
+    text-align: right;
+}
+.students-text-left{
+    top:3vw;
+    left: 5.3vw;
     text-align: right;
 }
 .logo-wix{
-    height: 47px;
-	width: 210px;    
+    height: 3vw;
+	width: 16vw;    
 }
 .student-name{
     margin-top:5vw;
-    font-size:2em;
+    font-size:2vw;
+    font-family:  'almoni-tzar-bold';     
+}
+.student-about{    
+    font-size: 3vw;
     font-weight: bold;
 }
-.student-about{
-    font-family: "avenir-next";
-    font-size: 2em;
-}
-.student-speach{
-    height: 184px;	
-    width: 644px;    
-    margin-top:2em;
-    font-family: "almoni-tzar";
-    font-size: 40px;	
-    font-weight: bold;	
-    line-height: 46px;
+.student-speach{   
+    width: 490px;    
+    margin-top:1em;    
 }
 .student-speach h3{
-    font-family: "almoni-tzar";
-    font-size: 40px;	
-    font-weight: bold;	
-    line-height: 46px;
-    margin-left: 3em;    	    
+    font-family: 'almoni-tzar-bold'; 
+    font-size:2.8vw;	
+    font-weight: bold;	    
 } 
 .btn-student{
-    height: 60px;
-    width: 180px;
+    height: 3vw;
+    width: 12vw;
     background-color: #FFFFFF;
-    font-size: 24px;	
-     
+    border: 2px solid white;
+    margin-top: 0.5em;
+    font-size: 2vw;     
+}
+.students-catalog{
+    display: flex;
+    margin-top: 1em;
+}
+.choose-student{
+    display: block;
+    width: 40px;
+    height:40px;
+    background: #5dc5ef;    
+    border-radius: 20px;
+    margin: auto 10px;
+}
+/*
+******************
+* CONTACT US BLOCK
+******************
+*/
+.block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+    width: calc(100%-80px);  
+    height:20vw;
+    background-color: #4B0082;
+    margin-bottom: 20px; 
+}
+.btn-contact-us{    	
+    border: 2px solid #FFFFFF;
+    background-color: transparent;
+    font-size: 1em;
+    color: #FFFFFF;
+}
+/*
+******************
+* COMPANIES
+******************
+*/
+.companies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+    width: calc(100%-80px);  
+    height:30vw;
+}
+.companies h1{
+    color: black;
+    font-weight: 900;
+
+}
+/*
+******************
+* FORM
+******************
+*/
+.form-contact-container{
+    display:flex;
+    width: 100%;  
+    height:40vw;
+    background-color: #F6F6F6;   
+    margin-bottom: 20px;
+}
+.text-meet-us {
+    width: 50%;
+    padding: 50px;
+}
+.form-container{
+    width: 50%;
+    padding: 50px;
+}
+.text-meet-us h1, .text-meet-us h5{
+    color: black;
+}
+.form-container{
+    display:flex;
+    flex-direction: column;
+}
+.form{
+    display:flex;
+    flex-direction: column;
+    /* margin-top: 20px;     */
+}
+.form-control{
+    margin-top: 30px;
+    background: #F6F6F6;
+    margin-left: 60px;
+}
+
+.form input{
+    border-top:none;
+    border-left:none;
+    border-right: none;  
+    border-bottom: 1px solid #B8B8B8;
+}
+textarea{
+    border: 1px solid #B8B8B8;
+}
+#btn-form{
+    background-color: #F90EB9;
+    border: none;
+    color: white;
+    font-size: 1em;
+    margin-top: 20px;  
+}
+/*
+******************
+* SUBSCRIPTION
+******************
+*/
+.subscription{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+    width: calc(100%-80px);  
+    height:20vw;
+    background: #F90EB9;    
+}
+.form-subscription{
+    height: 60px;
+    display: flex;
+}
+.form-subscription button{
+    color: #F90EB9;
+    font-size: 1em;
+}
+.form-subscription input{
+    height: 56px;
+    width: 490px;
+    padding: 0px;    
+    border: 2px solid #FFFFFF;
+    background: transparent;  
+    color: #FFFFFF;
+}
+.form-subscription input::-webkit-input-placeholder { 
+    color: white;
+    font-size: 1.3em;
+}
+.form-subscription input::-moz-placeholder {
+    color: white;
+    font-size: 1.3em;
+}
+/*
+******************
+* CREATE PHRASE
+******************
+*/
+.create-phrase{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+    background-color: #1D1D1D;
+    width: 100%;
+    height: 20vw;    
+    font-family: "Patron TRIAL";
+}
+.create-phrase hr{
+    margin-top: 20px;        
+    height: 2px;
+    width: 3vw;
+    background-color: #D8D8D8; 
+}
+/*
+******************
+* FOOTER
+******************
+*/
+footer{
+    background: black;
+    width: 100%;
+    height: 5vw;
 }

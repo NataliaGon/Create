@@ -36,7 +36,7 @@ h5{
     font-size: 1.8vw;
   }
 h6{
-    font-size: 1vw;
+    font-size: 1.6vw;
 }
 button{    
     height: 3vw;
@@ -183,10 +183,10 @@ header{
 }
 .choose-student{
     display: block;
-    width: 40px;
-    height:40px;
+    width: 4vw;
+    height:4vw;
     background: #5dc5ef;    
-    border-radius: 20px;
+    border-radius: 5vw;
     margin: auto 10px;
 }
 /*
@@ -259,47 +259,52 @@ header{
 .form-contact-container{
     display:flex;
     width: 100%;  
-    height:40vw;
+    height:35vw;
     background-color: #F6F6F6;   
     margin-bottom: 20px;
+    padding-top: 5vw;
 }
 .text-meet-us {
-    width: 50%;
-    padding: 5vw 15vw;    
+    width: 50%;    
+}
+.text-meet-us span{
+    display: block;
+    width: 64.4%;
+    margin-right: 17.14%;    
 }
 .form-container{
     width: 50%;
-    padding: 5vw;    
+    display:flex;
+    flex-direction: column;
 }
-.text-meet-us h1, .text-meet-us h5{
+.text-meet-us h1, .text-meet-us h6{
     color: black;
 }
 .text-meet-us h1{
     font-family: 'almoni-tzar-bold';
+    margin-left: 4.35%;
 }
-.text-meet-us h5{
+.text-meet-us h6{
     margin-top: 10px;
     line-height:1.5;
     letter-spacing:1px;
 }
-.form-container{
-    display:flex;
-    flex-direction: column;
-}
 .form{
     display:flex;
-    flex-direction: column;    
+    flex-direction: column;  
+    width: 74.7%;  
+    margin-right: 8.7%;    
 }
 .form-control{
-    margin-top: 2.5vw;
-    background: #F6F6F6;
-    margin-left: 60px;
+    margin-top: 1.5vw;
+    background: #F6F6F6;   
 }
 .form input{
     border-top:none;
     border-left:none;
     border-right: none;  
     border-bottom: 1px solid #B8B8B8;
+    padding-bottom: 1vw;   
 }
 textarea{
     border: 1px solid #B8B8B8;
@@ -309,8 +314,7 @@ textarea{
 #btn-form{
     background-color: #F90EB9;
     border: none;
-    color: white;
-    font-size: 1em;
+    color: white; 
     margin-top: 20px;  
 }
 /*
@@ -325,33 +329,35 @@ textarea{
     justify-content: center;
     width: calc(100%-80px);  
     height:20vw;
-    background: #F90EB9;    
+    background: #F90EB9;  
+    position: relative;  
 }
 .subscription h4{
     margin-top: 10px;
 }
 .form-subscription{    
     display: flex;
-    margin-top: 10px;
+    margin-top: 10px;  
+    width: 37%;   
 }
 .form-subscription button{
-    color: #F90EB9;    
+    color: #F90EB9;      
 }
 .form-subscription input{
     height: calc(3vw - 4px);
-    width: 49vw;
+    width: 71%;
     padding: 0px;    
     border: 2px solid #FFFFFF;
     background: transparent;  
-    color: #FFFFFF;
+    color: #FFFFFF;    
 }
 .form-subscription input::-webkit-input-placeholder { 
     color: white;
-    font-size: 1.2vw;
+    font-size: 0.8vw;
 }
 .form-subscription input::-moz-placeholder {
     color: white;
-    font-size: 1.2vw;
+    font-size: 0.8vw;
 }
 /*
 ******************

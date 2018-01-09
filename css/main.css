@@ -21,28 +21,27 @@ header, body{
     direction: rtl;
 }
 h1{
-    font-size:3em;
+    font-size:3vw;
   }
 h2{
-    font-size: 2em;
+    font-size: 2.9vw;
   }
 h3{
-    font-size: 1.5em;
+    font-size: 2.8vw;
   } 
 h4{
-    font-size: 1.2em;
+    font-size: 2vw;
   }
 h5{
-    font-size: 0.9em;
+    font-size: 1.8vw;
   }
 h6{
-    font-size: 0.6em;
+    font-size: 1vw;
 }
-button{
-    outline: none;
-    overflow: hidden;
-    height: 60px;
-    width: 200px;
+button{    
+    height: 3vw;
+    width: 12vw;
+    font-size: 2vw;
     font-family: 'almoni-tzar';
     font-weight: 600;
 }
@@ -120,8 +119,7 @@ header{
     background-color: transparent;
     position: absolute;
     bottom: 3vw;
-    color: #FFFFFF;
-    font-size: 1.5em;   
+    color: #FFFFFF;     
 }
 /*
 ******************
@@ -171,17 +169,13 @@ header{
     margin-top:1em;    
 }
 .student-speach h3{
-    font-family: 'almoni-tzar-bold'; 
-    font-size:2.8vw;	
+    font-family: 'almoni-tzar-bold';     	
     font-weight: bold;	    
 } 
-.btn-student{
-    height: 3vw;
-    width: 12vw;
+.btn-student{    
     background-color: #FFFFFF;
     border: 2px solid white;
-    margin-top: 0.5em;
-    font-size: 2vw;     
+    margin-top: 0.5em;        
 }
 .students-catalog{
     display: flex;
@@ -200,7 +194,7 @@ header{
 * CONTACT US BLOCK
 ******************
 */
-.block{
+.block-contact-us{
     display: flex;
     flex-direction: column;
     align-items: center;  
@@ -209,13 +203,16 @@ header{
     height:20vw;
     background-color: #4B0082;
     margin-bottom: 20px; 
+    padding: 0vw 34vw;
+    text-align: center;
 }
-.btn-contact-us{    	
+.btn-contact-us{    
+    margin-top: 10px;	
     border: 2px solid #FFFFFF;
-    background-color: transparent;
-    font-size: 1em;
+    background-color: transparent;   
     color: #FFFFFF;
 }
+
 /*
 ******************
 * COMPANIES
@@ -226,13 +223,33 @@ header{
     flex-direction: column;
     align-items: center;  
     justify-content: center;
-    width: calc(100%-80px);  
-    height:30vw;
+    width: 100%;  
+    height:30vw;   
+    margin-top: -20px; 
 }
 .companies h1{
-    color: black;
-    font-weight: 900;
-
+    color: black;    
+    font-family: 'almoni-tzar-bold';  
+}
+.companies-fist-line, .companies-second-line{    
+    display: flex;
+    width: 80%;
+    justify-content:space-between;   
+    margin-top: 5vw; 
+}
+.companies-fist-line{
+    margin-left: -7vw;
+}
+.companies-second-line{     
+     margin-left: 12vw;
+}
+.companies .logo-wix{
+    height: 1.5vw;
+    width: 6vw;
+    
+}
+.companies-fist-line img{
+        color: #B8B8B8;
 }
 /*
 ******************
@@ -248,14 +265,22 @@ header{
 }
 .text-meet-us {
     width: 50%;
-    padding: 50px;
+    padding: 5vw 15vw;    
 }
 .form-container{
     width: 50%;
-    padding: 50px;
+    padding: 5vw;    
 }
 .text-meet-us h1, .text-meet-us h5{
     color: black;
+}
+.text-meet-us h1{
+    font-family: 'almoni-tzar-bold';
+}
+.text-meet-us h5{
+    margin-top: 10px;
+    line-height:1.5;
+    letter-spacing:1px;
 }
 .form-container{
     display:flex;
@@ -263,15 +288,13 @@ header{
 }
 .form{
     display:flex;
-    flex-direction: column;
-    /* margin-top: 20px;     */
+    flex-direction: column;    
 }
 .form-control{
-    margin-top: 30px;
+    margin-top: 2.5vw;
     background: #F6F6F6;
     margin-left: 60px;
 }
-
 .form input{
     border-top:none;
     border-left:none;
@@ -280,6 +303,8 @@ header{
 }
 textarea{
     border: 1px solid #B8B8B8;
+    height: 10vw;
+    resize: none;
 }
 #btn-form{
     background-color: #F90EB9;
@@ -302,17 +327,19 @@ textarea{
     height:20vw;
     background: #F90EB9;    
 }
-.form-subscription{
-    height: 60px;
+.subscription h4{
+    margin-top: 10px;
+}
+.form-subscription{    
     display: flex;
+    margin-top: 10px;
 }
 .form-subscription button{
-    color: #F90EB9;
-    font-size: 1em;
+    color: #F90EB9;    
 }
 .form-subscription input{
-    height: 56px;
-    width: 490px;
+    height: calc(3vw - 4px);
+    width: 49vw;
     padding: 0px;    
     border: 2px solid #FFFFFF;
     background: transparent;  
@@ -320,11 +347,11 @@ textarea{
 }
 .form-subscription input::-webkit-input-placeholder { 
     color: white;
-    font-size: 1.3em;
+    font-size: 1.2vw;
 }
 .form-subscription input::-moz-placeholder {
     color: white;
-    font-size: 1.3em;
+    font-size: 1.2vw;
 }
 /*
 ******************
@@ -342,7 +369,7 @@ textarea{
     font-family: "Patron TRIAL";
 }
 .create-phrase hr{
-    margin-top: 20px;        
+    margin-top: 10px;        
     height: 2px;
     width: 3vw;
     background-color: #D8D8D8; 

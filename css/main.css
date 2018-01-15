@@ -41,9 +41,10 @@ h6{
 button{    
     height: 3vw;
     width: 12vw;
-    font-size: 2vw;
-    font-family: 'almoni-tzar';
-    font-weight: 600;
+    font-size: 1.25vw;  
+    letter-spacing: 0.1vw;  
+    font-family: "almoni-tzar";
+    font-weight: 700;
 }
 .z-index-2{
     position: absolute;
@@ -51,39 +52,21 @@ button{
 }  
 .container-background{
     display: flex;
-    flex-direction: column;
-    padding: 20px;
-    width: calc(100%-40px);
-    height: 100%;
-    background: #B8B8B8;    
+    flex-direction: column;    
+    height: 100%;        
     position: relative;
 }
-
-/*
-******************
-* HEADER
-******************
-*/
-header{
-    height: 80px;	
-    width: 100%;
-    background-color: #141414;
-    display: flex;
-    align-items: center; 
-    justify-content:space-between;    
+@media (min-width: 768px){
+    .container-background{
+    background: #B8B8B8;  
+    padding: 20px;
+    width: calc(100%-40px);  
+    }
 }
-.logo{
-    background-color: aliceblue;
-    color: #141414;
-}
-.list-menu{
-    height: 100%;
-    display: flex;
-    align-items: center;    
-}
-.list-menu>li{
-    color: #FFFFFF;
-    margin-right: 10px;    
+@media (max-width: 767px){
+    .container-background{
+    background: white;    
+    }
 }
 /*
 ******************
@@ -96,14 +79,8 @@ header{
     align-items: center;  
     justify-content: center;     
     width: 100%;  
-    height:40vw;
+    height:40vw; 
     position: relative;
-}
-.graduate-img{
-    width: 100%;
-	height: 100%;
-    position: absolute;
-    z-index: 1;
 }
 .graduate-text{
     display: flex;
@@ -115,11 +92,85 @@ header{
     font-family:  'almoni-tzar-bold';    
 }
 .btn-collaboration{    
-    border: 2px solid #FFFFFF;
+    border: 1px solid #FFFFFF;
     background-color: transparent;
-    position: absolute;
-    bottom: 3vw;
+    position: absolute;    
     color: #FFFFFF;     
+}
+@media (min-width: 768px){    
+    .graduate-img{
+        width: 100%;
+        height: 100%;        
+        position: absolute;
+        z-index: 1;
+        background-size: contain;
+    }
+    .graduate-img-mobile{
+        display: none;
+    }
+    .btn-collaboration{
+        /* height: 3.12vw;
+        width: 10.41%;  */
+        height: 3em;
+        width: auto;
+        font-size: 1em;
+        padding: .7em 3.85em; 
+       /* font-size: 1.25vw;   */
+        bottom: 3vw;
+    }
+}
+@media (max-width: 767px){   
+    .our-graduate{
+        height: 146.6vw;
+    } 
+    .graduate-img-mobile{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        background-size: contain;
+    }
+    .graduate-img{
+        display:none;
+    }
+    .graduate-text {
+        padding: 20px;
+    }
+    .graduate-text h1{
+        font-size: 38px;
+        text-align: center;
+    }
+    .graduate-text h3{
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .btn-collaboration{
+        /* height: 13.33vw;
+        width: 48%;  */
+        height: 50px;
+        width: 180px;
+        font-size: 24px; 
+        bottom: 40px;
+    }
+}
+@media (max-width: 376px){
+    .graduate-text h1{
+        font-size: 28px;
+        text-align: center;
+    }
+    .graduate-text h3{
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}    
+@media (max-width: 316px){
+    .btn-collaboration{
+        height: 30px;      
+        width: 120px;
+        font-size: 18px;    
+}
 }
 /*
 ******************
@@ -158,15 +209,11 @@ header{
 .student-name{
     margin-top:5vw;
     font-size:2vw;
-    font-family:  'almoni-tzar-bold';     
+    font-family: 'almoni-tzar-bold';     
 }
 .student-about{    
     font-size: 3vw;
     font-weight: bold;
-}
-.student-speach{   
-    width: 490px;    
-    margin-top:1em;    
 }
 .student-speach h3{
     font-family: 'almoni-tzar-bold';     	
@@ -181,14 +228,168 @@ header{
     display: flex;
     margin-top: 1em;
 }
-.choose-student{
+.photo-student{
     display: block;
     width: 4vw;
     height:4vw;
     background: #5dc5ef;    
-    border-radius: 5vw;
+    border-radius: 4vw;
+    margin: 10px;
+}
+@media (min-width: 768px){ 
+    .section-mobile{
+        display:none;
+    }
+    .student-speach{   
+        width: 490px;    
+        margin-top:1em;    
+    }
+}
+@media (max-width: 767px){ 
+.section{
+    display:none;
+}
+.section-mobile{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    height: 220vw;
+    width: 100%;   
+    margin-top:18px; 
+    position: relative;   
+}
+.students-img-mob{
+    width: 100%;
+    height: 106.6vw;  
+    background-size: cover;    
+    position: absolute;
+    z-index: 1;
+}
+.logo-wix{
+    margin-top: 38vw;
+    width: 140px;
+    height: 32px;   
+}
+.choose-student-mob-btn{
+    display: block;
+    width: 10px;
+    height:10px;
+    background: white;    
+    border-radius: 10px;
     margin: auto 10px;
 }
+.btns-choose-student{
+    display: flex;
+    position: absolute;
+    top:66.75vw;
+}
+.students-line-mob{
+    display: flex;
+    top: 74.5vw;        
+}
+.student-info-mob{
+    display:none;
+    margin: 0px 7px;
+    background-color: #F90EB9; 
+    height: calc(129vw - 44px);    
+    width: calc(88vw - 30px);    
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+    padding: 22px 19px 22px 11px;    
+}
+.student-speach{
+    text-align: right;  
+}
+.visible{
+    display: flex;
+}
+.photo-student{
+    height: 70px;	
+    width: 70px;
+    border-radius: 70px;
+}
+.student-name{
+    font-size: 30px;	
+    font-weight: bold;	
+    margin-top: 0px;
+}
+.student-speach h1{
+    font-size: 50px;
+    text-align: center;
+}
+.student-speach h3{
+    font-size: 22px;
+    line-height: 30px;	    
+} 
+.btn-student{    
+    height: 50px;      
+    width: 180px; 
+    font-size: 20px;
+    color: #F90EB9;
+    font-weight: 900;
+}
+.student-about{    
+    font-size: 18px;
+    font-weight: 900;
+}
+}
+@media (max-width: 376px){
+    .student-name{
+        font-size: 18px;	
+        font-weight: bold;	
+        margin-top: 0px;
+    }
+    .student-speach h1{
+        font-size: 30px;
+        text-align: center;
+    }
+    .student-speach h3{
+        font-size: 14px;
+        line-height: 30px;	    
+    } 
+}
+@media (max-width: 316px){
+    .photo-student{        
+        width: 35px;
+        height:35px;          
+        border-radius: 35px;       
+    }
+    .btn-student{    
+        height: 30px;      
+        width: 120px; 
+        font-size: 14px;       
+        font-weight: 900;
+    }
+}
+@media (max-width: 279px){
+    .photo-student{        
+        width: 20px;
+        height:20px;          
+        border-radius: 20px;       
+    }
+    .btn-student{    
+        height: 20x;      
+        width: 100px; 
+        font-size: 12px;       
+        font-weight: 900;
+    }
+    .student-name{
+        font-size: 20px;	
+        font-weight: bold;	
+        margin-top: 0px;
+    }
+    .student-speach h1{
+        font-size: 20px;
+        text-align: center;
+    }
+    .student-speach h3{
+        font-size: 14px;
+        line-height: 20px;	    
+    } 
+}
+
+
 /*
 ******************
 * CONTACT US BLOCK
@@ -201,7 +402,7 @@ header{
     justify-content: center;
     width: calc(100%-80px);  
     height:20vw;
-    background-color: #4B0082;
+    background-color: #0000CD;
     margin-bottom: 20px; 
     padding: 0vw 34vw;
     text-align: center;
@@ -212,181 +413,120 @@ header{
     background-color: transparent;   
     color: #FFFFFF;
 }
+@media (max-width: 768px){ 
+    .block-contact-us{
+        margin-top: 18px;
+        height: 40vw;
+        padding: 24px;
+    }
+    .block-contact-us h2{
+        font-size: 30px;
+    }
+    .btn-contact-us{
+        height: 50px;      
+        width: 180px; 
+        font-size: 20px;
+    }
+}
+@media (max-width: 316px){ 
+    .block-contact-us h2{
+        font-size: 18px;
+    }
+    .btn-contact-us{
+        height: 30px;      
+        width: 120px; 
+        font-size: 14px;
+    }
+}
+
 
 /*
 ******************
 * COMPANIES
 ******************
 */
-.companies{
-    display: flex;
-    flex-direction: column;
-    align-items: center;  
-    justify-content: center;
-    width: 100%;  
-    height:30vw;   
-    margin-top: -20px; 
-}
+
 .companies h1{
     color: black;    
     font-family: 'almoni-tzar-bold';  
 }
-.companies-fist-line, .companies-second-line{    
-    display: flex;
-    width: 80%;
-    justify-content:space-between;   
-    margin-top: 5vw; 
-}
-.companies-fist-line{
-    margin-left: -7vw;
-}
-.companies-second-line{     
-     margin-left: 12vw;
-}
-.companies .logo-wix{
-    height: 1.5vw;
-    width: 6vw;
-    
-}
+
 .companies-fist-line img{
         color: #B8B8B8;
 }
-/*
-******************
-* FORM
-******************
-*/
-.form-contact-container{
-    display:flex;
-    width: 100%;  
-    height:35vw;
-    background-color: #F6F6F6;   
-    margin-bottom: 20px;
-    padding-top: 5vw;
+@media (min-width: 768px){
+    .companies{
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+        justify-content: center;
+        width: 100%;  
+        height:30vw;   
+        margin-top: -20px; 
+    }
+    .companies-fist-line, .companies-second-line{    
+        display: flex;
+        width: 80%;
+        justify-content:space-between;   
+        margin-top: 5vw; 
+    }
+    .companies-fist-line{
+        margin-left: -7vw;
+    }
+    .companies-second-line{     
+         margin-left: 12vw;
+    }
+    .companies .logo-wix{
+        height: 1.5vw;
+        width: 6vw;    
+    }
 }
-.text-meet-us {
-    width: 50%;    
+@media (max-width: 767px){ 
+    .companies{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "title title"
+        "column1 column2";
+        background: #B8B8B8;
+        height: 100%;
+        padding: 10px;
+    }
+    .companies .logo-wix{
+        margin-top: 15vw;
+    }
+    .companies-fist-line, .companies-second-line{
+        display: flex;
+        flex-direction: column;    
+        justify-self: center;  
+    }    
+    .companies-fist-line{
+        grid-area: column1;
+    }
+    .companies-second-line{
+        grid-area: column2;
+    }
+    .companies h1{   
+        grid-area: title;         
+        font-family: 'almoni-tzar-bold';  
+        font-size: 30px;
+        margin-top: 40px;
+        text-align: center;
+    }
+
 }
-.text-meet-us span{
-    display: block;
-    width: 64.4%;
-    margin-right: 17.14%;    
-}
-.form-container{
-    width: 50%;
-    display:flex;
-    flex-direction: column;
-}
-.text-meet-us h1, .text-meet-us h6{
-    color: black;
-}
-.text-meet-us h1{
-    font-family: 'almoni-tzar-bold';
-    margin-left: 4.35%;
-}
-.text-meet-us h6{
-    margin-top: 10px;
-    line-height:1.5;
-    letter-spacing:1px;
-}
-.form{
-    display:flex;
-    flex-direction: column;  
-    width: 74.7%;  
-    margin-right: 8.7%;    
-}
-.form-control{
-    margin-top: 1.5vw;
-    background: #F6F6F6;   
-}
-.form input{
-    border-top:none;
-    border-left:none;
-    border-right: none;  
-    border-bottom: 1px solid #B8B8B8;
-    padding-bottom: 1vw;   
-}
-textarea{
-    border: 1px solid #B8B8B8;
-    height: 10vw;
-    resize: none;
-}
-#btn-form{
-    background-color: #F90EB9;
-    border: none;
-    color: white; 
-    margin-top: 20px;  
-}
-/*
-******************
-* SUBSCRIPTION
-******************
-*/
-.subscription{
-    display: flex;
-    flex-direction: column;
-    align-items: center;  
-    justify-content: center;
-    width: calc(100%-80px);  
-    height:20vw;
-    background: #F90EB9;  
-    position: relative;  
-}
-.subscription h4{
-    margin-top: 10px;
-}
-.form-subscription{    
-    display: flex;
-    margin-top: 10px;  
-    width: 37%;   
-}
-.form-subscription button{
-    color: #F90EB9;      
-}
-.form-subscription input{
-    height: calc(3vw - 4px);
-    width: 71%;
-    padding: 0px;    
-    border: 2px solid #FFFFFF;
-    background: transparent;  
-    color: #FFFFFF;    
-}
-.form-subscription input::-webkit-input-placeholder { 
-    color: white;
-    font-size: 0.8vw;
-}
-.form-subscription input::-moz-placeholder {
-    color: white;
-    font-size: 0.8vw;
-}
-/*
-******************
-* CREATE PHRASE
-******************
-*/
-.create-phrase{
-    display: flex;
-    flex-direction: column;
-    align-items: center;  
-    justify-content: center;
-    background-color: #1D1D1D;
-    width: 100%;
-    height: 20vw;    
-    font-family: "Patron TRIAL";
-}
-.create-phrase hr{
-    margin-top: 10px;        
-    height: 2px;
-    width: 3vw;
-    background-color: #D8D8D8; 
-}
-/*
-******************
-* FOOTER
-******************
-*/
-footer{
-    background: black;
-    width: 100%;
-    height: 5vw;
+@media (max-width: 318px){
+    .companies{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        "title"
+        "column1"
+        "column2";
+        background: #B8B8B8;
+        height: 100%;
+        padding: 10px;
+    }
 }

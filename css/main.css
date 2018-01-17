@@ -13,7 +13,7 @@
     font-family: 'almoni-tzar-bold';    
     src: url(../fonts/almoni-tzar-aaa-700.woff);   
 }
-header, body{
+header, body{    
     font-family: "almoni-tzar";
     font-weight: 100;
     font-size: 16px; 
@@ -182,11 +182,18 @@ button{
     height:45vw;    
     position: relative;
     z-index: 1;
-    margin-bottom: 20px;
+    margin-bottom: 20px;  
 }
 .section:last-child{
     margin-bottom: 0px;
 }
+.each-student-info{
+    display: none;
+}
+.visible-student{
+    display: block;
+}
+
 .students-img{
     width: 100%;
 	height: 100%;
@@ -285,14 +292,16 @@ button{
 }
 .students-line-mob{
     display: flex;
-    top: 74.5vw;        
+    top: 74.5vw; 
+    width: 100%;
+    overflow-x: hidden;       
 }
-.student-info-mob{
-    display:none;
+.student-info-mob{   
+    display: flex;
     margin: 0px 7px;
     background-color: #F90EB9; 
     height: calc(129vw - 44px);    
-    width: calc(88vw - 30px);    
+    min-width: calc(88vw - 30px);    
     flex-direction: column;
     align-items: center;  
     justify-content: center;
@@ -388,7 +397,30 @@ button{
         line-height: 20px;	    
     } 
 }
-
+/*
+******************
+* POPUP
+******************
+*/
+.popup{
+    display: none;
+    position: fixed;
+    top:15%;
+    left:0;
+    right: 3.125%;
+    bottom: 0;
+    width: 93.75%;
+    height: 41.66vw;
+    background-color: #FFFFFF;
+    z-index: 3;
+    box-shadow: 1px 10px 450px 450px rgba(209, 208, 208, 0.89);
+}
+#x-close{
+    position: absolute;
+    z-index: 3;
+    top: 30px;
+    right: 29px;
+}
 
 /*
 ******************

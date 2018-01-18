@@ -4,9 +4,16 @@ var allStudentsBtns = document.querySelectorAll('.choose-student-btn');
 
 for (var i = 0; i < allStudentsBtns.length; i++) {
     var studentBtn = allStudentsBtns[i];
+    
     studentBtn.addEventListener('click', function (event) {
-
-        var idx = Array.prototype.indexOf.call(allStudentsBtns, event.target);
+        var allBtnSiblins = this.parentNode.children;
+        for (var i = 0; i < allBtnSiblins.length; i++) {
+            var studentBtn = allBtnSiblins [i];
+            studentBtn.classList.remove('active');
+        }
+        this.classList.add('active'); 
+        
+        var idx = Array.prototype.indexOf.call(allStudentsBtns, this);
         console.log(idx);
         findStudentInfo(idx);
 

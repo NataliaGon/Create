@@ -13,6 +13,10 @@
     font-family: 'almoni-tzar-bold';    
     src: url(../fonts/almoni-tzar-aaa-700.woff);   
 }
+@font-face {
+    font-family: 'almoni-tzar-regular';    
+    src: url(../fonts/almoni-tzar-aaa-400.ttf);   
+}
 header, body{    
     font-family: "almoni-tzar";
     font-weight: 100;
@@ -43,7 +47,7 @@ button{
     width: 12vw;
     font-size: 1.25vw;  
     letter-spacing: 0.1vw;  
-    font-family: "almoni-tzar";
+    font-family: "almoni-tzar-regular";
     font-weight: 700;
 }
 .z-index-2{
@@ -58,7 +62,7 @@ button{
 }
 @media (min-width: 768px){
     .container-background{
-    background: #B8B8B8;  
+    background: rgb(226, 224, 224);  
     padding: 20px;
     width: calc(100%-40px);  
     }
@@ -177,8 +181,7 @@ button{
 * STUDENTS
 ******************
 */
-.section{  
-    width: calc(100%-80px);  
+.section{      
     height:45vw;    
     position: relative;
     z-index: 1;
@@ -193,7 +196,6 @@ button{
 .visible-student{
     display: block;
 }
-
 .students-img{
     width: 100%;
 	height: 100%;
@@ -201,7 +203,7 @@ button{
 }
 .students-text-right{   
     top:3vw;
-    right: 4vw;
+    right: 4vw;    
     text-align: right;
 }
 .students-text-left{
@@ -214,7 +216,7 @@ button{
 	width: 16vw;    
 }
 .student-name{
-    margin-top:5vw;
+    margin-top:3vw;
     font-size:2vw;
     font-family: 'almoni-tzar-bold';     
 }
@@ -231,18 +233,37 @@ button{
     border: 2px solid white;
     margin-top: 0.5em;        
 }
-.students-catalog{
+.students-catalog-btns{
     display: flex;
-    margin-top: 1em;
+    bottom: 20px;
+    position: absolute; 
+    width: 490px; 
 }
-.photo-student{
-    display: block;
-    width: 4vw;
-    height:4vw;
-    background: #5dc5ef;    
-    border-radius: 4vw;
-    margin: 10px;
+.right{
+    right: 4vw;
 }
+.left{
+    left: 5.3vw;
+}
+.photo-student-img{
+    width: 5vw;
+    height:5vw;
+    border-radius: 5vw;      
+}
+.photo-student-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6vw;
+    height:6vw;        
+    border-radius: 6vw;   
+    background-size:contain; 
+    overflow: hidden;
+    position: relative; 
+}
+.active{
+    border:3px solid white;       
+}    
 @media (min-width: 768px){ 
     .section-mobile{
         display:none;
@@ -250,7 +271,7 @@ button{
     .student-speach{   
         width: 490px;    
         margin-top:1em;    
-    }
+    }    
 }
 @media (max-width: 767px){ 
 .section{
@@ -313,11 +334,11 @@ button{
 .visible{
     display: flex;
 }
-.photo-student{
+/* .photo-student-block{
     height: 70px;	
     width: 70px;
     border-radius: 70px;
-}
+} */
 .student-name{
     font-size: 30px;	
     font-weight: bold;	
@@ -359,11 +380,11 @@ button{
     } 
 }
 @media (max-width: 316px){
-    .photo-student{        
+    /* .photo-student-block-block{        
         width: 35px;
         height:35px;          
         border-radius: 35px;       
-    }
+    } */
     .btn-student{    
         height: 30px;      
         width: 120px; 
@@ -372,11 +393,11 @@ button{
     }
 }
 @media (max-width: 279px){
-    .photo-student{        
+    /* .photo-student-block-block{        
         width: 20px;
         height:20px;          
         border-radius: 20px;       
-    }
+    } */
     .btn-student{    
         height: 20x;      
         width: 100px; 
@@ -421,7 +442,11 @@ button{
     top: 30px;
     right: 29px;
 }
-
+@media (max-width: 767px){ 
+    .popup{
+         height: 90vw;
+}   
+} 
 /*
 ******************
 * CONTACT US BLOCK
@@ -470,19 +495,15 @@ button{
         font-size: 14px;
     }
 }
-
-
 /*
 ******************
 * COMPANIES
 ******************
 */
-
 .companies h1{
     color: black;    
     font-family: 'almoni-tzar-bold';  
 }
-
 .companies-fist-line img{
         color: #B8B8B8;
 }
@@ -501,13 +522,14 @@ button{
         width: 80%;
         justify-content:space-between;   
         margin-top: 5vw; 
+        /* margin-left: -7vw; */
     }
-    .companies-fist-line{
+    /* .companies-fist-line{
         margin-left: -7vw;
     }
     .companies-second-line{     
          margin-left: 12vw;
-    }
+    } */
     .companies .logo-wix{
         height: 1.5vw;
         width: 6vw;    
